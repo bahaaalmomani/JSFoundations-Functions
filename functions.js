@@ -21,8 +21,11 @@ greet("hamza");
  * isOdd(10) -> false
  */
 function isOdd(n) {
-  if (n % 2 === 0) return false;
-  else return true;
+  if (n % 2 === 0) {
+    return false;
+  } else {
+    return true;
+  }
 }
 /**
  * oddsSmallerThan(n):
@@ -34,7 +37,11 @@ function isOdd(n) {
  * oddsSmallerThan(15) -> 7
  */
 function oddsSmallerThan(n) {
-  if (n % 2 === 0) return n;
+  if (isOdd(n)) {
+    return n / 2 - 0.5;
+  } else {
+    return n / 2;
+  }
 }
 
 /**
@@ -48,8 +55,11 @@ function oddsSmallerThan(n) {
  * squareOrDouble(9) -> 81
  */
 function squareOrDouble(n) {
-  if (n % 2 === 0) return square;
-  else return double;
+  if (isOdd(n)) {
+    return n ^ 2;
+  } else {
+    return n * 2;
+  }
 }
 
 module.exports = { greet, isOdd, oddsSmallerThan, squareOrDouble };
