@@ -6,10 +6,10 @@
  * e.g.
  * greet("Hamza") logs "Hello Hamza"
  */
-function greet(name) {
-  console.log("hello hamza");
-}
-greet("hamza");
+const greet = (name) => {
+  console.log(`Hello ${name}`);
+};
+greet("bahaa");
 
 /**
  * isOdd(n):
@@ -20,13 +20,13 @@ greet("hamza");
  * isOdd(7) -> true
  * isOdd(10) -> false
  */
-function isOdd(n) {
+const isOdd = (n) => {
   if (n % 2 === 0) {
     return false;
   } else {
     return true;
   }
-}
+};
 /**
  * oddsSmallerThan(n):
  * - receives a number n
@@ -36,13 +36,10 @@ function isOdd(n) {
  * oddsSmallerThan(7) -> 3
  * oddsSmallerThan(15) -> 7
  */
-function oddsSmallerThan(n) {
-  if (isOdd(n)) {
-    return n / 2 - 0.5;
-  } else {
-    return n / 2;
-  }
-}
+const oddsSmallerThan = (n) => {
+  if (isOdd(n)) return (n - 1) / 2;
+  else return n / 2;
+};
 
 /**
  * squareOrDouble(n):
@@ -56,7 +53,7 @@ function oddsSmallerThan(n) {
  */
 function squareOrDouble(n) {
   if (isOdd(n)) {
-    return n ^ 2;
+    return n * n;
   } else {
     return n * 2;
   }
